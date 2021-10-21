@@ -1,0 +1,25 @@
+{
+    "name": "testing-practice",
+    "version": "1.0.0",
+    "description": "the odin project, testing practice project",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest",
+        "watch": "jest --watch *.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/stevenh-gh/testing-practice.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/stevenh-gh/testing-practice/issues"
+    },
+    "homepage": "https://github.com/stevenh-gh/testing-practice#readme",
+    "devDependencies": {
+        "@babel/preset-env": "^7.15.8",
+        "jest": "^27.3.1"
+    }
+}
