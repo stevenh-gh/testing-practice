@@ -9,14 +9,17 @@ function checkUppercase(char) {
 }
 
 function shiftChar(char, shift) {
-    if (char === " ") { return char }
-    let c = alphabet[(alphabet.indexOf(char.toLowerCase()) + shift) % 26];
-    return checkUppercase(char) ? c.toUpperCase() : c;
+    if (alphabet.includes(char.toLowerCase())) {
+        let c = alphabet[(alphabet.indexOf(char.toLowerCase()) + shift) % 26];
+        console.log(`char:${char},c:${c}`);
+        return checkUppercase(char) ? c.toUpperCase() : c;
+    }
+    return char;
 }
 
 export default function caesarCipher(str, shift) {
     let cipher = "";
-    for (let i = 0; i < str.length; ++i) {
+    for (let i = 0; i < str.length; i++) {
         cipher += shiftChar(str[i], shift);
     }
     return cipher;

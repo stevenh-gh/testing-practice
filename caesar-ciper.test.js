@@ -22,3 +22,7 @@ it("should work with and keep capitalization", () => {
 it("should work with full sentences", () => {
     expect(caesarCipher("The quick brown fox jumps over the lazy dog", 5)).toBe("Ymj vznhp gwtbs ktc ozrux tajw ymj qfed itl");
 })
+
+it("should ignore non-alphabet chars", () => {
+    expect(caesarCipher("The! quick* brown? fox> <<jumps^& $$@over %the## lazy)) (*&^][dog{}}|.", 5)).toBe("Ymj! vznhp* gwtbs? ktc> <<ozrux^& $$@tajw %ymj## qfed)) (*&^][itl{}}|.");
+})
